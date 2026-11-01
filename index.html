@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Hack Day Batam · Builder files</title>
+<meta property="og:title" content="Hack Day Batam · Builder files (draft)">
+<meta property="og:description" content="Instagram carousel drafts for @growthr.id: 4 builders, 4 projects, 5 hours.">
+<meta property="og:image" content="slides/joni/slide-01.jpg">
+<link rel="icon" href="img/mark.svg">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+/* Layout: growthr.id site language. Ink nav, blue hero with a lime highlight, paper body; each builder is a
+   section with a swipeable 3:4 strip (like the IG carousel), the caption, and downloads. Single light theme by choice. */
+:root{--ink:#0a0e29;--blue:#1d2bd8;--lime:#d4ff3a;--paper:#f5f4ee;--white:#fff;--mute:#4a4f6a;--line:#dedcd2;
+  --display:"Sora","Arial Black",Arial,sans-serif;--body:"Inter","Segoe UI",Arial,sans-serif;--mono:"JetBrains Mono",Consolas,monospace;
+  color-scheme:light}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+nav{background:var(--ink);color:var(--white);padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;height:64px}
+nav img{height:30px;display:block}
+.draft{font:500 13px var(--mono);background:var(--lime);color:var(--ink);padding:6px 12px;border-radius:999px;border:2px solid var(--ink);white-space:nowrap}
+.hero{background:var(--blue);color:var(--white);padding-block:56px 64px}
+.eyebrow{font:500 14px var(--mono);letter-spacing:.04em;color:var(--lime);margin:0}
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.045em;line-height:1.02;font-size:clamp(40px,7.5vw,84px);margin:16px 0 0;text-wrap:balance}
+h1 mark{background:var(--lime);color:var(--ink);padding:0 .14em;border-radius:12px;box-shadow:6px 6px 0 var(--ink);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.lede{max-width:60ch;margin:24px 0 0;font-size:18px;color:rgba(255,255,255,.85)}
+.jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.jump a{font:500 14px var(--mono);text-decoration:none;background:var(--white);color:var(--ink);padding:9px 14px;border-radius:12px;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink)}
+.jump a:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.jump a:focus-visible,.btn:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+section.b{padding-block:56px;border-bottom:2px solid var(--line)}
+.bh{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px}
+.no{font:500 14px var(--mono);color:var(--blue);margin:0}
+h2{font-family:var(--display);font-weight:800;letter-spacing:-.04em;font-size:clamp(30px,4.6vw,48px);line-height:1.05;margin:6px 0 0}
+.by{margin:6px 0 0;color:var(--mute)}
+.win{font:500 13px var(--mono);background:var(--lime);padding:6px 12px;border-radius:999px;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);white-space:nowrap}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:22px 2px 16px;margin-inline:-2px}
+.strip a{flex:0 0 min(76vw,300px);scroll-snap-align:start;display:block}
+.strip img{width:100%;aspect-ratio:3/4;display:block;border-radius:12px;border:2px solid var(--ink);background:var(--white)}
+.hint{font:13px var(--mono);color:var(--mute);margin:0}
+.grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;margin-top:22px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+.cap{background:var(--white);border:2px solid var(--ink);border-radius:16px;padding:18px 20px;min-width:0}
+.cap h3,.dl h3{font:500 13px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin:0 0 10px}
+.cap pre{white-space:pre-wrap;word-break:break-word;font:15px/1.55 var(--body);margin:0;max-height:330px;overflow:auto}
+.btn{font:600 14px var(--body);background:var(--ink);color:var(--white);border:0;border-radius:10px;padding:10px 14px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.alt{background:var(--white);color:var(--ink);border:2px solid var(--ink)}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.dl{border:2px dashed var(--line);border-radius:16px;padding:18px 20px;min-width:0}
+.dl ul{margin:0;padding-left:18px;color:var(--mute);font-size:15px}
+.dl li{margin:4px 0}
+footer{padding-block:40px 56px;color:var(--mute);font-size:14px}
+footer b{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){.jump a:hover{transform:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><img src="img/logo-dark.svg" alt="growthr.id"><span class="draft">Draft · team review</span></div></nav>
+<header class="hero"><div class="wrap">
+  <p class="eyebrow">Hacktoberfest Hack Day Kota Batam × Batam Innovation Center · 31 Oct 2026</p>
+  <h1>4 builders. 4 projects. <mark>5 hours.</mark></h1>
+  <p class="lede">Instagram carousel drafts for @growthr.id. One post per builder, one a day, each ending with a pointer to the next. Tap a slide to open it full size.</p>
+  <div class="jump" id="jump"></div>
+</div></header>
+<main id="list"></main>
+<footer><div class="wrap">Format 3:4, 1080×1440 PNG, ready for Instagram (crop: <b>Original</b>). Facts come from each project's MLH submission, README and demo.</div></footer>
+<script src="builders.js"></script>
+<script src="captions.js"></script>
+<script>
+const pad=n=>String(n).padStart(2,'0');
+document.getElementById('jump').innerHTML=BUILDERS.map(b=>`<a href="#${b.id}">${pad(b.n)} · ${b.project}</a>`).join('');
+document.getElementById('list').innerHTML=BUILDERS.map(b=>`
+<section class="b" id="${b.id}"><div class="wrap">
+  <div class="bh"><div><p class="no">Builder file ${pad(b.n)}/04 · day ${b.n}</p><h2>${b.project}</h2><p class="by">${b.name}</p></div>${b.tag?`<span class="win">${b.tag}</span>`:''}</div>
+  <div class="strip">${[1,2,3,4,5].map(i=>`<a href="slides/${b.id}/slide-0${i}.png" target="_blank" rel="noopener"><img loading="lazy" src="slides/${b.id}/slide-0${i}.jpg" alt="${b.project}, slide ${i} of 5"></a>`).join('')}</div>
+  <p class="hint">Swipe sideways · 5 slides</p>
+  <div class="grid">
+    <div class="cap"><h3>Caption</h3><pre id="cap-${b.id}"></pre><div class="row"><button class="btn" id="copy-${b.id}">Copy caption</button></div></div>
+    <div class="dl"><h3>Files</h3><ul><li>5 PNG slides, 1080×1440</li><li>Demo and code links are on slide 5</li></ul>
+      <div class="row"><a class="btn alt" href="zip/${b.id}.zip" download>Download slides (.zip)</a></div></div>
+  </div>
+</div></section>`).join('');
+BUILDERS.forEach(b=>{
+  const pre=document.getElementById('cap-'+b.id); pre.textContent=CAPTIONS[b.id]||'';
+  const btn=document.getElementById('copy-'+b.id);
+  btn.addEventListener('click',()=>{navigator.clipboard.writeText(pre.textContent).then(()=>{btn.textContent='Copied';setTimeout(()=>btn.textContent='Copy caption',1600)},()=>{const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press Ctrl+C'})});
+});
+</script>
+</body>
+</html>
