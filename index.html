@@ -74,7 +74,7 @@ footer b{color:var(--ink)}
 <script src="captions.js"></script>
 <script>
 const pad=n=>String(n).padStart(2,'0');
-document.getElementById('jump').innerHTML=BUILDERS.map(b=>`<a href="#${b.id}">${pad(b.n)} · ${b.project}</a>`).join('');
+document.getElementById('jump').innerHTML=BUILDERS.map(b=>`<a href="#${b.id}">${pad(b.n)} · ${b.project}</a>`).join('')+'<a href="recap/">05 · Hack Day recap →</a>';
 document.getElementById('list').innerHTML=BUILDERS.map(b=>`
 <section class="b" id="${b.id}"><div class="wrap">
   <div class="bh"><div><p class="no">Builder file ${pad(b.n)}/04 · day ${b.n}</p><h2>${b.project}</h2><p class="by">${b.name}</p></div>${b.tag?`<span class="win">${b.tag}</span>`:''}</div>
