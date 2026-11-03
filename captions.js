@@ -14,7 +14,7 @@ Builder file 01/04. Swipe to see how it works.
 #hacktoberfest #mlh #gemma #arduino #batam #opensource #buildinpublic`,
 kiell: `Sketch2Sim turns a paper sketch into an Arduino circuit that actually runs. Snap the drawing, Gemma 4 reads it, a validator fixes the wiring, and Wokwi runs it.
 
-The hard part: Gemma spent most of each compile thinking. A shorter prompt took it from 104 to 30 seconds with the same output.
+The hard part: Gemma spent most of each compile thinking. A shorter prompt took it from 104 to about 30 seconds with the same output.
 
 Built in 5 hours by Kiell Tampubolon at Hacktoberfest Hack Day Kota Batam x Batam Innovation Center, and one of the day's winners.
 
@@ -38,7 +38,7 @@ Builder file 03/04. Swipe to see how it works.
 #hacktoberfest #mlh #gemma #earthengine #batam #opensource #buildinpublic`,
 adi: `Should you wear a mask outside today? AirMask Buddy answers that for Batam. It combines live air quality from Google with NASA fire detections, decides the risk with fixed rules, and lets Gemma 4 explain it, offline on an Arduino UNO Q.
 
-The hard part: Gemma reads about 2 tokens a second on the board. A 110-token prompt cut the wait for its note from 120 to 45 seconds.
+The hard part: Gemma runs at about 2 tokens a second on the board. A 110-token prompt cut the wait for its note from up to 120 seconds to about 45.
 
 Built in 5 hours by Mukhammad Miftakhul As'Adi at Hacktoberfest Hack Day Kota Batam x Batam Innovation Center.
 
